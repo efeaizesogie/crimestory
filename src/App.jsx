@@ -184,6 +184,7 @@ export function App() {
             <MapCanvas
               geoData={geoData}
               mode={mapMode}
+              activeChapter={activeChapter}
               hoveredState={hoveredState}
               setHoveredState={setHoveredState}
               selectedState={selectedState}

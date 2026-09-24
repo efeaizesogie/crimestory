@@ -405,121 +405,111 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 40px;
+  padding: 96px 44px;
   position: relative;
   scroll-margin-top: 60px;
-  transition: opacity var(--duration-normal) var(--ease-editorial);
+  border-left: none;
 }
 
 .step-card {
-  background: rgba(16, 20, 26, 0.92);
+  background: rgba(16, 20, 26, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
   border-radius: 8px;
-  padding: 36px 32px;
+  padding: 42px 38px;
   position: relative;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-  opacity: 0.38;
-  transform: translateY(14px) scale(0.985);
-  filter: blur(0.2px);
+  opacity: 0;
+  transform: translateY(28px);
+  pointer-events: none;
   transition:
-    opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 350ms ease,
-    box-shadow 400ms ease,
-    filter 450ms ease;
-}
-
-.step-card:hover {
-  opacity: 0.82;
-  filter: blur(0px);
+    opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms ease,
+    box-shadow 400ms ease;
 }
 
 .step-card.active-step {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0px);
-  border-color: var(--step-accent, rgba(239, 68, 68, 0.42));
-  box-shadow:
-    0 28px 64px rgba(0, 0, 0, 0.85),
-    0 0 0 1px var(--step-accent, rgba(239, 68, 68, 0.3)),
-    0 0 28px rgba(239, 68, 68, 0.08);
+  transform: translateY(0);
+  pointer-events: auto;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.07);
+  transition:
+    opacity 850ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 600ms ease,
+    box-shadow 600ms ease;
 }
 
-.step-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  background: transparent;
-  transition: background 350ms ease, box-shadow 350ms ease;
+/* Staggered Content Reveals for Active Section */
+.step-card .headline-section,
+.step-card .headline-sub,
+.step-card .body-editorial,
+.step-card .stat-highlight-block,
+.step-card .category-breakdown-card,
+.step-card .concentration-cards-grid,
+.step-card .divergence-explainer-grid,
+.step-card .select-prompt-box,
+.step-card .state-profile-card,
+.step-card .methodology-teaser-card,
+.step-card .editorial-note {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.step-card.active-step::before {
-  background: var(--step-accent, var(--crime-red));
-  box-shadow: 0 0 12px var(--step-accent, rgba(239, 68, 68, 0.65));
+.step-card.active-step .headline-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0ms;
 }
 
-/* Eyebrow Header Row & Progress Indicator */
-.step-eyebrow-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-  gap: 12px;
+.step-card.active-step .headline-sub {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 90ms;
 }
 
-.step-eyebrow-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.step-card.active-step .body-editorial:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 150ms;
 }
 
-.step-pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 300ms ease, transform 300ms ease;
+.step-card.active-step .body-editorial:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 220ms;
 }
 
-.step-card.active-step .step-pulse-dot {
-  box-shadow: 0 0 8px currentColor;
-  animation: stepPulseDot 2s infinite ease-in-out;
+.step-card.active-step .body-editorial:nth-of-type(n+3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 280ms;
 }
 
-@keyframes stepPulseDot {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.4);
-    opacity: 0.65;
-  }
+.step-card.active-step .stat-highlight-block,
+.step-card.active-step .concentration-cards-grid,
+.step-card.active-step .category-breakdown-card,
+.step-card.active-step .divergence-explainer-grid,
+.step-card.active-step .select-prompt-box,
+.step-card.active-step .state-profile-card,
+.step-card.active-step .scatter-plot-container,
+.step-card.active-step .rankings-list-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 320ms;
 }
 
-.step-eyebrow-text {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.step-index-pill {
-  font-size: 11px;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 2px 8px;
-  letter-spacing: 0.05em;
+.step-card.active-step .editorial-note,
+.step-card.active-step .methodology-teaser-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 400ms;
 }
 
 /* Stat Highlight Blocks */
@@ -1614,6 +1604,10 @@ body {
   border-radius: 3px;
   text-transform: uppercase;
   line-height: 1.2;
+}
+
+.tooltip-badge-pill:empty {
+  display: none;
 }
 
 .badge-total {

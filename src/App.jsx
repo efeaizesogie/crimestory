@@ -16,50 +16,127 @@ export function App() {
   const [hoveredState, setHoveredState] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [isMethodologyOpen, setIsMethodologyOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const statesData = crimeData?.states || [];
 
-  // Scrollytelling step observer
-  useEffect(() => {
-    const handleScroll = () => {
-      const steps = document.querySelectorAll('.story-step');
-      const triggerY = window.innerHeight * 0.45;
+  // Refs for smooth, glitch-free scroll synchronization
+  const activeChapterRef = useRef(0);
+  const isNavigatingRef = useRef(false);
+  const navTimeoutRef = useRef(null);
 
-      let currentStepIndex = 0;
-      steps.forEach((step) => {
-        const rect = step.getBoundingClientRect();
-        if (rect.top <= triggerY && rect.bottom >= triggerY) {
-          const idx = parseInt(step.getAttribute('data-chapter-index'), 10);
-          if (!isNaN(idx)) {
-            currentStepIndex = idx;
+  // Scrollytelling step observer using requestAnimationFrame and proximity focal line
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (ticking) return;
+
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+
+        // Calculate overall page scroll progress (0.0 to 1.0)
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight > 0) {
+          const progress = Math.min(Math.max(window.scrollY / docHeight, 0), 1);
+          setScrollProgress(progress);
+        }
+
+        // If currently in a programmatic smooth scroll jump, suppress intermediate updates
+        if (isNavigatingRef.current) {
+          return;
+        }
+
+        const steps = document.querySelectorAll('.story-step');
+        if (!steps.length) return;
+
+        // Check if reader is still looking at the Hero section above story steps
+        const firstStepRect = steps[0].getBoundingClientRect();
+        if (firstStepRect.top > window.innerHeight * 0.72) {
+          if (activeChapterRef.current !== 0) {
+            activeChapterRef.current = 0;
+            setActiveChapter(0);
+            if (CHAPTERS[0]?.mode) {
+              setMapMode(CHAPTERS[0].mode);
+            }
+          }
+          return;
+        }
+
+        // Focal line where reader eye naturally rests (44% of viewport height)
+        const triggerY = window.innerHeight * 0.44;
+        const currentActive = activeChapterRef.current;
+
+        let bestIndex = currentActive;
+        let minDistance = Infinity;
+
+        steps.forEach((step, idx) => {
+          const rect = step.getBoundingClientRect();
+          const stepCenter = (rect.top + rect.bottom) / 2;
+          let distance = Math.abs(stepCenter - triggerY);
+
+          // Hysteresis buffer: 25px affinity for current active card to prevent knife-edge boundary jitter
+          if (idx === currentActive) {
+            distance -= 25;
+          }
+
+          if (distance < minDistance) {
+            minDistance = distance;
+            bestIndex = idx;
+          }
+        });
+
+        if (bestIndex !== currentActive) {
+          activeChapterRef.current = bestIndex;
+          setActiveChapter(bestIndex);
+          const targetChapter = CHAPTERS[bestIndex];
+          if (targetChapter && targetChapter.mode) {
+            setMapMode(targetChapter.mode);
           }
         }
       });
-
-      if (currentStepIndex !== activeChapter) {
-        setActiveChapter(currentStepIndex);
-        const targetChapter = CHAPTERS[currentStepIndex];
-        if (targetChapter && targetChapter.mode) {
-          setMapMode(targetChapter.mode);
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeChapter]);
+    // Run initial alignment
+    handleScroll();
 
-  // Jump to specific chapter from top navigation
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (navTimeoutRef.current) {
+        clearTimeout(navTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Jump smoothly to specific chapter from top navigation or button
   const handleSelectChapter = useCallback((index) => {
-    setActiveChapter(index);
-    const steps = document.querySelectorAll('.story-step');
-    if (steps[index]) {
-      steps[index].scrollIntoView({ behavior: 'smooth' });
+    if (navTimeoutRef.current) {
+      clearTimeout(navTimeoutRef.current);
     }
+    isNavigatingRef.current = true;
+
+    activeChapterRef.current = index;
+    setActiveChapter(index);
+
     const targetChapter = CHAPTERS[index];
     if (targetChapter && targetChapter.mode) {
       setMapMode(targetChapter.mode);
     }
+
+    const steps = document.querySelectorAll('.story-step');
+    if (steps[index]) {
+      steps[index].scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+
+    // Release lock once smooth scrolling settles
+    navTimeoutRef.current = setTimeout(() => {
+      isNavigatingRef.current = false;
+    }, 850);
   }, []);
 
   const handleStartScroll = useCallback(() => {
@@ -78,6 +155,7 @@ export function App() {
         onSelectChapter={handleSelectChapter}
         onOpenMethodology={() => setIsMethodologyOpen(true)}
         chapters={CHAPTERS}
+        scrollProgress={scrollProgress}
       />
 
       {/* Hero Opening Screen */}

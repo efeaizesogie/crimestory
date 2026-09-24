@@ -207,10 +207,21 @@ export function StoryChapter({
       className="story-step"
       data-chapter-index={index}
       data-mode={chapter.mode}
+      id={`story-step-${index}`}
     >
       <div
         className={`step-card ${isActive ? 'active-step' : ''}`}
+        style={{ '--step-accent': accentColor }}
       >
+        {/* Editorial Eyebrow Header & Progress Pill */}
+        <div className="step-eyebrow-row">
+          <div className="step-eyebrow-left">
+
+          </div>
+          <span className="step-index-pill font-mono">
+            {String(index + 1).padStart(2, '0')} / 12
+          </span>
+        </div>
 
         {/* Section Headline */}
         <h2 className="headline-section">{chapter.headline}</h2>

@@ -170,6 +170,16 @@ body {
 
 .hero-scroll-cue .cue-icon {
   color: var(--crime-red);
+  animation: cueIconBounce 2s infinite ease-in-out;
+}
+
+@keyframes cueIconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }
 
 /* Scrollytelling Container */
@@ -230,6 +240,24 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-scroll-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nav-scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #EF4444 0%, #F97316 65%, #FBBF24 100%);
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+  transition: width 100ms linear;
 }
 
 .nav-brand {
@@ -377,40 +405,122 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 96px 40px;
   position: relative;
+  scroll-margin-top: 60px;
   transition: opacity var(--duration-normal) var(--ease-editorial);
 }
 
 .step-card {
-  background: rgba(18, 22, 27, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(16, 20, 26, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 36px 32px;
   position: relative;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65);
-  transition: border-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  opacity: 0.38;
+  transform: translateY(14px) scale(0.985);
+  filter: blur(0.2px);
+  transition:
+    opacity 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms ease,
+    box-shadow 400ms ease,
+    filter 450ms ease;
+}
+
+.step-card:hover {
+  opacity: 0.82;
+  filter: blur(0px);
 }
 
 .step-card.active-step {
-  border-color: var(--border-strong);
-  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(239, 68, 68, 0.2);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+  border-color: var(--step-accent, rgba(239, 68, 68, 0.42));
+  box-shadow:
+    0 28px 64px rgba(0, 0, 0, 0.85),
+    0 0 0 1px var(--step-accent, rgba(239, 68, 68, 0.3)),
+    0 0 28px rgba(239, 68, 68, 0.08);
 }
 
-/* .step-card::before {
+.step-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 3px;
+  width: 4px;
   height: 100%;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  background: var(--step-accent, var(--border-subtle));
-  transition: background var(--duration-fast) var(--ease-editorial);
-} */
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: transparent;
+  transition: background 350ms ease, box-shadow 350ms ease;
+}
+
+.step-card.active-step::before {
+  background: var(--step-accent, var(--crime-red));
+  box-shadow: 0 0 12px var(--step-accent, rgba(239, 68, 68, 0.65));
+}
+
+/* Eyebrow Header Row & Progress Indicator */
+.step-eyebrow-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+.step-eyebrow-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+
+.step-card.active-step .step-pulse-dot {
+  box-shadow: 0 0 8px currentColor;
+  animation: stepPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes stepPulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.65;
+  }
+}
+
+.step-eyebrow-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.step-index-pill {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 2px 8px;
+  letter-spacing: 0.05em;
+}
 
 /* Stat Highlight Blocks */
 .stat-highlight-block {
@@ -1282,6 +1392,34 @@ body {
   padding: 12px 14px 14px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 2px 6px rgba(0, 0, 0, 0.4);
   min-width: 276px;
+  animation: legendFadeIn 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes legendFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.proportional-symbols-layer {
+  animation: symbolLayerFadeIn 450ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform-origin: center;
+}
+
+@keyframes symbolLayerFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .legend-title {

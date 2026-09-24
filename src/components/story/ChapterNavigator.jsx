@@ -5,7 +5,8 @@ export function ChapterNavigator({
   activeChapter,
   onSelectChapter,
   onOpenMethodology,
-  chapters
+  chapters,
+  scrollProgress = 0
 }) {
   return (
     <nav className="editorial-navbar" aria-label="Story chapters navigation">
@@ -44,6 +45,14 @@ export function ChapterNavigator({
           <BookOpen size={14} />
           <span>METHODOLOGY</span>
         </button>
+      </div>
+
+      {/* Fine-lined Editorial Scroll Progress Bar */}
+      <div className="nav-scroll-progress-track" aria-hidden="true">
+        <div
+          className="nav-scroll-progress-bar"
+          style={{ width: `${Math.round(scrollProgress * 100)}%` }}
+        />
       </div>
     </nav>
   );

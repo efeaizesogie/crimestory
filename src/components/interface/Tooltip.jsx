@@ -78,7 +78,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-total">TOTAL VOLUME</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Rank #{getRank('total_cases')} of 37</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -115,7 +115,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-rate">POPULATION RATE</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Rate #{getRank('crime_rate')} of 37</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -184,7 +184,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-property">PROPERTY OFFENCES</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Property Rank #{getRank('property_rate')}</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -217,7 +217,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-persons">CRIMES VS PERSONS</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Persons Rank #{getRank('persons_rate')}</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -248,7 +248,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-authority">LAWFUL AUTHORITY</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Authority Rank #{getRank('authority_rate')}</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -280,7 +280,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
         return (
           <>
             <div className="tooltip-mode-header">
-              <span className="tooltip-badge-pill badge-local">LOCAL ACTS</span>
+              <span className="tooltip-badge-pill "></span>
               <span className="tooltip-rank-tag font-mono">Local Acts Rank #{getRank('local_acts_rate')}</span>
             </div>
             <div className="tooltip-hero-stat">
@@ -303,8 +303,8 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
                 {s.name === 'Gombe'
                   ? '★ National outlier: Leads Nigeria in local acts enforcement (356 cases).'
                   : s.local_acts > 0
-                  ? `${formatNumber(s.local_acts)} statutory jurisdiction-specific offences.`
-                  : 'Zero local acts offences recorded in 2016 police records.'}
+                    ? `${formatNumber(s.local_acts)} statutory jurisdiction-specific offences.`
+                    : 'Zero local acts offences recorded in 2016 police records.'}
               </span>
             </div>
           </>
@@ -318,11 +318,10 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
             <div className="tooltip-mode-header">
               <span
                 className="tooltip-badge-pill"
-                style={{ backgroundColor: `${divColor}22`, color: divColor, border: `1px solid ${divColor}55` }}
               >
-                PROPERTY DIVERGENCE
+
               </span>
-              <span className="tooltip-rank-tag font-mono">Rank #{getRank('property_divergence')}</span>
+              <span className="tooltip-rank-tag font-mono item-end">Rank #{getRank('property_divergence')}</span>
             </div>
             <div className="tooltip-hero-stat">
               <span className="tooltip-hero-num font-mono" style={{ color: divColor }}>

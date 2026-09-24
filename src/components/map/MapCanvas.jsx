@@ -191,7 +191,7 @@ export function MapCanvas({
                     opacity={isSelected ? 1.0 : (selectedState ? 0.45 : (isHovered ? 1.0 : 0.92))}
                     style={{
                       cursor: 'pointer',
-                      transition: 'fill 650ms cubic-bezier(0.22, 1, 0.36, 1), stroke 250ms ease, opacity 350ms ease'
+                      transition: 'fill 480ms cubic-bezier(0.22, 1, 0.36, 1), stroke 220ms ease, opacity 300ms ease'
                     }}
                     onMouseEnter={(e) => handleStateMouseEnter(f, e)}
                     onMouseMove={handleStateMouseMove}
@@ -290,7 +290,7 @@ export function MapCanvas({
 
       {/* Dynamic Classification Legend in Bottom-Left */}
       <div className="map-legend-dock">
-        <MapLegend mode={mode} />
+        <MapLegend key={mode} mode={mode} />
       </div>
 
       {/* Subtle Map Controls (Top-Right / Floating) */}

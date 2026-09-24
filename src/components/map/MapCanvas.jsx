@@ -42,11 +42,14 @@ export function MapCanvas({
     if (!geoData || !geoData.features?.length) return { projection: null, pathGenerator: null };
 
     // Standard Web Mercator fitted to Nigeria's geometry
+    const horizontalMargin = Math.max(24, dimensions.width * 0.05);
+    const verticalMargin = Math.max(28, dimensions.height * 0.08);
+
     const proj = d3.geoMercator()
       .fitExtent(
         [
-          [dimensions.width * 0.08, dimensions.height * 0.12],
-          [dimensions.width * 0.92, dimensions.height * 0.88]
+          [horizontalMargin, verticalMargin],
+          [dimensions.width - horizontalMargin, dimensions.height - verticalMargin]
         ],
         geoData
       );
@@ -97,6 +100,18 @@ export function MapCanvas({
       setSelectedState(feature.properties);
     }
   };
+
+  // Sync tooltip position when hovered from external lists (e.g. StateRankingsList or ScatterPlot)
+  useEffect(() => {
+    if (hoveredState && projection && hoveredState.centroid) {
+      if (containerRef.current && !containerRef.current.matches(':hover')) {
+        const pt = projection(hoveredState.centroid);
+        if (pt) {
+          setTooltipPos({ x: pt[0], y: pt[1] });
+        }
+      }
+    }
+  }, [hoveredState, projection]);
 
   // Key states that receive prominent labels
   const prominentStates = ['Lagos', 'FCT', 'Delta', 'Kano', 'Ondo', 'Plateau', 'Borno', 'Rivers'];
@@ -241,12 +256,12 @@ export function MapCanvas({
           )}
 
           {/* Leader-Line Callout Annotations matching original reference maps */}
-          <MapCallouts
+          {/* <MapCallouts
             mode={mode}
             projection={projection}
             hoveredState={hoveredState}
             selectedState={selectedState}
-          />
+          /> */}
         </g>
       </svg>
 
@@ -293,6 +308,7 @@ export function MapCanvas({
         hoveredState={hoveredState}
         position={tooltipPos}
         mode={mode}
+        containerDimensions={dimensions}
       />
     </div>
   );

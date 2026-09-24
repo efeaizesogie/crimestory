@@ -1,20 +1,67 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect, useState } from 'react';
 import { formatNumber, formatRate, formatPercent } from '../../utils/formatting';
 
-export function Tooltip({ hoveredState, position, mode }) {
+export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
+  const tooltipRef = useRef(null);
+  const [measuredSize, setMeasuredSize] = useState({ width: 230, height: 240 });
+
+  useLayoutEffect(() => {
+    if (tooltipRef.current) {
+      const rect = tooltipRef.current.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        if (
+          Math.abs(rect.width - measuredSize.width) > 2 ||
+          Math.abs(rect.height - measuredSize.height) > 2
+        ) {
+          setMeasuredSize({ width: rect.width, height: rect.height });
+        }
+      }
+    }
+  }, [hoveredState]);
+
   if (!hoveredState) return null;
 
   const s = hoveredState;
 
+  const containerW = containerDimensions?.width || (typeof window !== 'undefined' ? window.innerWidth * 0.6 : 800);
+  const containerH = containerDimensions?.height || (typeof window !== 'undefined' ? window.innerHeight : 700);
+
+  const tooltipW = tooltipRef.current?.offsetWidth || measuredSize.width || 230;
+  const tooltipH = tooltipRef.current?.offsetHeight || measuredSize.height || 240;
+
+  const margin = 16;
+  const cursorGap = 16;
+
+  // Horizontal calculation: default to right of cursor (+16px)
+  let left = position.x + cursorGap;
+  // If tooltip exceeds right boundary, flip it to the left side of cursor
+  if (left + tooltipW > containerW - margin) {
+    left = position.x - tooltipW - cursorGap;
+  }
+  // Clamp horizontally so it never goes off-screen
+  left = Math.max(margin, Math.min(left, containerW - tooltipW - margin));
+
+  // Vertical calculation: default slightly above cursor (-12px)
+  let top = position.y - 12;
+  // If tooltip exceeds bottom boundary, flip it above the cursor
+  if (top + tooltipH > containerH - margin) {
+    top = position.y - tooltipH - cursorGap;
+  }
+  // Clamp vertically so it never clips top or bottom
+  top = Math.max(margin, Math.min(top, containerH - tooltipH - margin));
+
   return (
     <div
+      ref={tooltipRef}
       className="editorial-tooltip"
       style={{
         position: 'absolute',
-        left: `${position.x + 14}px`,
-        top: `${position.y - 12}px`,
+        left: `${Math.round(left)}px`,
+        top: `${Math.round(top)}px`,
         pointerEvents: 'none',
-        zIndex: 1000
+        zIndex: 1000,
+        maxHeight: `${Math.max(160, containerH - margin * 2)}px`,
+        overflowY: 'auto'
       }}
     >
       <div className="tooltip-header">

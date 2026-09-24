@@ -2022,132 +2022,6 @@ body {
 }
 
 /* ==========================================================================
-   Mobile & Tablet Responsive Layout
-   ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-section {
-    padding: 90px 1.5rem 60px 1.5rem;
-  }
-
-  .hero-stats-band {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .hero-stat-divider {
-    display: none;
-  }
-
-  .editorial-navbar {
-    padding: 0 1rem;
-  }
-
-  .nav-chapters-list {
-    max-width: 55vw;
-  }
-
-  .scrolly-container {
-    flex-direction: column;
-  }
-
-  .map-sticky-col {
-    position: sticky;
-    top: 54px;
-    width: 100%;
-    height: 48vh;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
-    z-index: 50;
-    flex: none;
-  }
-
-  .narrative-col,
-  .narrative-scroll-col {
-    width: 100%;
-    max-width: 100%;
-    flex: none;
-  }
-
-  .story-step {
-    min-height: auto;
-    padding: 40px 20px;
-  }
-
-  .step-card {
-    padding: 24px 20px;
-  }
-
-  .concentration-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .modal-grid-sections {
-    grid-template-columns: 1fr;
-  }
-
-  .map-legend-dock {
-    bottom: 10px;
-    left: 10px;
-    max-width: calc(100% - 20px);
-  }
-
-  .map-legend-box {
-    padding: 8px 10px 10px;
-    min-width: 220px;
-  }
-
-  .legend-title {
-    font-size: 9px;
-    margin-bottom: 4px;
-  }
-
-  .legend-ramp {
-    height: 11px;
-    margin-top: 2px;
-  }
-
-  .legend-ticks {
-    height: 12px;
-    margin-top: 3px;
-  }
-
-  .legend-tick-label {
-    font-size: 8px;
-  }
-
-  /* Responsive Closing Page */
-  .closing-page-section {
-    padding: 80px 20px 60px;
-  }
-
-  .closing-takeaways-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .closing-benchmark-strip {
-    flex-direction: column;
-    gap: 18px;
-    padding: 24px 20px;
-  }
-
-  .benchmark-divider {
-    width: 60px;
-    height: 1px;
-  }
-
-  .closing-colophon-band {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .colophon-divider {
-    display: none;
-  }
-}
-
-/* ==========================================================================
    Closing Page Component
    ========================================================================== */
 .closing-page-section {
@@ -2365,6 +2239,425 @@ body {
   width: 1px;
   height: 24px;
   background: var(--border-subtle);
+}
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Design System
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .hero-section {
+    padding: 80px 1.25rem 50px 1.25rem;
+    min-height: 85vh;
+  }
+
+  .hero-content-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-stats-band {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    width: 100%;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+
+  /* Top Navigation */
+  .editorial-navbar {
+    padding: 0 0.75rem;
+    height: 50px;
+  }
+
+  .nav-chapters-list {
+    max-width: 60vw;
+    gap: 2px;
+  }
+
+  .nav-chapter-dot {
+    padding: 3px 6px;
+  }
+
+  .nav-chapter-dot .chapter-num {
+    font-size: 10px;
+  }
+
+  /* Sticky Scrollytelling Stack: Map sits sticky at top, cards scroll below */
+  .scrolly-container {
+    flex-direction: column;
+  }
+
+  .map-sticky-col {
+    order: -1;
+    position: sticky;
+    top: 50px;
+    width: 100%;
+    height: clamp(280px, 44vh, 420px);
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 50;
+    flex: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .narrative-col,
+  .narrative-scroll-col {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    padding: 0 8px;
+  }
+
+  .story-step {
+    min-height: 70vh;
+    padding: 32px 8px 60px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .step-card {
+    padding: 22px 18px;
+    max-width: 620px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Map Canvas Overlays on Mobile */
+  .map-corner-header {
+    top: 8px;
+    left: 10px;
+  }
+
+  .map-badge {
+    font-size: 9.5px;
+  }
+
+  .map-author-credit {
+    font-size: 8.5px;
+  }
+
+  .map-controls-panel {
+    top: 8px;
+    right: 8px;
+    gap: 6px;
+  }
+
+  .map-ctrl-btn {
+    padding: 6px 8px;
+  }
+
+  .quick-mode-pills {
+    display: none;
+  }
+
+  .scale-bar-wrapper {
+    display: none;
+  }
+
+  .map-carto-meta {
+    bottom: 8px;
+    right: 8px;
+    gap: 0;
+  }
+
+  .north-arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .north-symbol {
+    font-size: 8px;
+  }
+
+  .north-label {
+    font-size: 7px;
+  }
+
+  .map-legend-dock {
+    bottom: 8px;
+    left: 8px;
+    max-width: calc(100% - 40px);
+    z-index: 20;
+  }
+
+  .map-legend-box {
+    padding: 6px 8px 8px;
+    min-width: 160px;
+    max-width: 240px;
+  }
+
+  .legend-title {
+    font-size: 8.5px;
+    margin-bottom: 2px;
+  }
+
+  .legend-subtitle {
+    display: none;
+  }
+
+  .legend-ramp {
+    height: 8px;
+    margin-top: 2px;
+  }
+
+  .legend-ticks {
+    height: 10px;
+    margin-top: 2px;
+  }
+
+  .legend-tick-label {
+    font-size: 7.5px;
+  }
+
+  .category-legend-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    margin-top: 4px;
+  }
+
+  .cat-desc {
+    display: none;
+  }
+
+  .cat-info .cat-name {
+    font-size: 10px;
+  }
+
+  /* Responsive Cards & Charts */
+  .concentration-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .conc-card {
+    padding: 12px 14px;
+  }
+
+  .divergence-explainer-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .rankings-list-card {
+    padding: 14px 12px;
+    margin: 16px 0;
+  }
+
+  .ranking-row {
+    grid-template-columns: 16px 64px 1fr 85px;
+    gap: 6px;
+    padding: 6px 8px;
+  }
+
+  .rank-name {
+    font-size: 11px;
+  }
+
+  .rank-val {
+    font-size: 11px;
+  }
+
+  .rank-sub {
+    font-size: 9px;
+  }
+
+  .rankings-tab-bar {
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .rankings-tab {
+    padding: 4px 7px;
+    font-size: 10px;
+  }
+
+  .editorial-scatterplot-container {
+    padding: 14px 10px;
+    margin: 16px 0;
+  }
+
+  .chart-title {
+    font-size: 12px;
+  }
+
+  .state-profile-card {
+    padding: 16px 14px;
+    margin: 16px 0;
+  }
+
+  .profile-title {
+    font-size: 20px;
+  }
+
+  .profile-stats-grid {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .category-breakdown-card {
+    padding: 14px 12px;
+    margin: 16px 0;
+  }
+
+  .cat-bar-interactive-item {
+    padding: 10px 12px;
+  }
+
+  /* Tooltip on Mobile */
+  .editorial-tooltip {
+    min-width: 190px;
+    max-width: calc(100% - 16px);
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .tooltip-state-name {
+    font-size: 13px;
+  }
+
+  .tooltip-hero-num {
+    font-size: 16px;
+  }
+
+  .tooltip-metrics-grid {
+    gap: 4px;
+    padding: 4px 6px;
+  }
+
+  .tooltip-metric-item .metric-val {
+    font-size: 10px;
+  }
+
+  /* Modal on Mobile */
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .editorial-modal-content {
+    max-height: 90vh;
+  }
+
+  .modal-header {
+    padding: 16px 18px;
+  }
+
+  .modal-body-scroll {
+    padding: 16px 18px;
+    gap: 16px;
+  }
+
+  .modal-grid-sections {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Closing Page on Mobile */
+  .closing-page-section {
+    padding: 70px 16px 50px;
+  }
+
+  .closing-headline {
+    font-size: clamp(24px, 5.5vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .closing-lead-text {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .closing-takeaways-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .closing-takeaway-card {
+    padding: 22px 18px;
+  }
+
+  .closing-benchmark-strip {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 16px;
+    margin-bottom: 36px;
+  }
+
+  .benchmark-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .closing-actions-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  .closing-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .closing-colophon-band {
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 24px;
+  }
+
+  .colophon-divider {
+    display: none;
+  }
+}
+
+/* Fine-tuned small mobile screen adjustments */
+@media (max-width: 520px) {
+  .nav-action-btn span {
+    display: none;
+  }
+
+  .nav-action-btn {
+    padding: 6px 8px;
+  }
+
+  .brand-title {
+    font-size: 10px;
+  }
+
+  .ranking-row {
+    grid-template-columns: 16px 56px 1fr 75px;
+    padding: 5px 6px;
+  }
+
+  .stat-pair-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .stat-pair-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Accessibility & Reduced Motion */

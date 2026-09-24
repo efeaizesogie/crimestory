@@ -42,9 +42,10 @@ export function MapCanvas({
   const { projection, pathGenerator } = useMemo(() => {
     if (!geoData || !geoData.features?.length) return { projection: null, pathGenerator: null };
 
-    // Standard Web Mercator fitted to Nigeria's geometry
-    const horizontalMargin = Math.max(24, dimensions.width * 0.05);
-    const verticalMargin = Math.max(28, dimensions.height * 0.08);
+    // Standard Web Mercator fitted to Nigeria's geometry with responsive margins
+    const isMobile = dimensions.width < 600;
+    const horizontalMargin = isMobile ? 12 : Math.max(24, dimensions.width * 0.05);
+    const verticalMargin = isMobile ? 14 : Math.max(28, dimensions.height * 0.08);
 
     const proj = d3.geoMercator()
       .fitExtent(
@@ -98,11 +99,20 @@ export function MapCanvas({
     setHoveredState(null);
   };
 
-  const handleStateClick = (feature) => {
+  const handleStateClick = (feature, e) => {
     if (selectedState?.name === feature.properties.name) {
       setSelectedState(null);
+      setHoveredState(null);
     } else {
       setSelectedState(feature.properties);
+      setHoveredState(feature.properties);
+      if (e && containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        setTooltipPos({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        });
+      }
     }
   };
 
@@ -133,7 +143,8 @@ export function MapCanvas({
         height: '100%',
         backgroundColor: '#0B0D10',
         overflow: 'hidden',
-        userSelect: 'none'
+        userSelect: 'none',
+        touchAction: 'pan-y'
       }}
     >
       {/* Editorial Header in Map Corner */}
@@ -209,7 +220,7 @@ export function MapCanvas({
                     onMouseEnter={(e) => handleStateMouseEnter(f, e)}
                     onMouseMove={handleStateMouseMove}
                     onMouseLeave={handleStateMouseLeave}
-                    onClick={() => handleStateClick(f)}
+                    onClick={(e) => handleStateClick(f, e)}
                   />
                 );
               })}
@@ -227,6 +238,12 @@ export function MapCanvas({
                 const isHovered = hoveredState?.name === p.name;
                 const isSelected = selectedState?.name === p.name;
                 const isProminent = prominentStates.includes(p.name);
+
+                // On compact mobile displays, avoid overlapping text by showing prominent or active states
+                const isMobile = dimensions.width < 500;
+                if (isMobile && !isProminent && !isHovered && !isSelected) {
+                  return null;
+                }
 
                 // Small states label positioning tweaks
                 let offsetY = 3;

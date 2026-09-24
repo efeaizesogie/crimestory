@@ -53,8 +53,10 @@ export function App() {
         if (!steps.length) return;
 
         // Check if reader is still looking at the Hero section above story steps
+        const isMobile = window.innerWidth <= 1024;
         const firstStepRect = steps[0].getBoundingClientRect();
-        if (firstStepRect.top > window.innerHeight * 0.72) {
+        const heroThreshold = isMobile ? window.innerHeight * 0.85 : window.innerHeight * 0.72;
+        if (firstStepRect.top > heroThreshold) {
           if (activeChapterRef.current !== 0) {
             activeChapterRef.current = 0;
             setActiveChapter(0);
@@ -65,8 +67,10 @@ export function App() {
           return;
         }
 
-        // Focal line where reader eye naturally rests (44% of viewport height)
-        const triggerY = window.innerHeight * 0.44;
+        // Focal line where reader eye naturally rests:
+        // On desktop: 44% of viewport height (card centered in left narrative column)
+        // On mobile: 74% of viewport height (card centered in visible reading area below 42vh sticky map)
+        const triggerY = isMobile ? window.innerHeight * 0.74 : window.innerHeight * 0.44;
         const currentActive = activeChapterRef.current;
 
         let bestIndex = currentActive;
@@ -128,10 +132,22 @@ export function App() {
 
     const steps = document.querySelectorAll('.story-step');
     if (steps[index]) {
-      steps[index].scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
+      if (window.innerWidth <= 1024) {
+        // On mobile, scroll so the card sits directly into the readable zone below the sticky map
+        const navHeight = 54;
+        const mapHeight = window.innerHeight * 0.44;
+        const cardRect = steps[index].getBoundingClientRect();
+        const targetScrollY = window.scrollY + cardRect.top - navHeight - mapHeight + 12;
+        window.scrollTo({
+          top: Math.max(0, targetScrollY),
+          behavior: 'smooth'
+        });
+      } else {
+        steps[index].scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }
     }
 
     // Release lock once smooth scrolling settles

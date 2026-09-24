@@ -9,7 +9,6 @@ export function MethodologyModal({ isOpen, onClose }) {
       <div className="editorial-modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <div>
-            <span className="eyebrow">EDITORIAL COLOPHON & METHODS</span>
             <h2 className="headline-section" style={{ fontSize: '28px', marginBottom: 6 }}>
               DATA, SOURCES & LIMITATIONS
             </h2>

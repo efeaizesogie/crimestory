@@ -7,6 +7,7 @@ import { ChapterHero } from './components/story/ChapterHero';
 import { StoryChapters } from './components/story/StoryChapters';
 import { MapCanvas } from './components/map/MapCanvas';
 import { MethodologyModal } from './components/story/MethodologyModal';
+import { ClosingPage } from './components/story/ClosingPage';
 
 import { CHAPTERS } from './data/chaptersData';
 
@@ -147,6 +148,10 @@ export function App() {
     setMapMode(categoryMode);
   }, []);
 
+  const handleRestart = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="app-root">
       {/* Editorial Top Navigation */}
@@ -195,6 +200,12 @@ export function App() {
           </div>
         </div>
       </main>
+
+      {/* Concluding Editorial Synthesis & Colophon */}
+      <ClosingPage
+        onRestart={handleRestart}
+        onOpenMethodology={() => setIsMethodologyOpen(true)}
+      />
 
       {/* Research & Methodology Modal */}
       <MethodologyModal

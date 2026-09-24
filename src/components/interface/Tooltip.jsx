@@ -321,7 +321,7 @@ export function Tooltip({ hoveredState, position, mode, containerDimensions }) {
               >
 
               </span>
-              <span className="tooltip-rank-tag font-mono item-end">Rank #{getRank('property_divergence')}</span>
+              <span className="tooltip-rank-tag font-mono ">Rank #{getRank('property_divergence')}</span>
             </div>
             <div className="tooltip-hero-stat">
               <span className="tooltip-hero-num font-mono" style={{ color: divColor }}>

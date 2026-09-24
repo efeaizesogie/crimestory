@@ -1,0 +1,1667 @@
+[
+  {
+    "state": "Abia",
+    "code": "NGAB",
+    "area_sqkm": 4875.1,
+    "population": 3817811,
+    "total_cases": 364,
+    "crime_rate_per_100k": 9.53,
+    "national_share_pct": 0.29,
+    "rank_cases": 36,
+    "rank_rate": 36,
+    "categories": {
+      "persons": {
+        "count": 230,
+        "pct": 63.19,
+        "rate_per_100k": 6.02
+      },
+      "property": {
+        "count": 113,
+        "pct": 31.04,
+        "rate_per_100k": 2.96
+      },
+      "lawful_authority": {
+        "count": 21,
+        "pct": 5.77,
+        "rate_per_100k": 0.55
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 63.19,
+    "centroid": [
+      7.42381,
+      5.34658
+    ],
+    "bbox": [
+      7.141451,
+      4.821731,
+      7.985856,
+      6.038689
+    ]
+  },
+  {
+    "state": "FCT",
+    "code": "NGFC",
+    "area_sqkm": 7422.3,
+    "population": 3911806,
+    "total_cases": 13181,
+    "crime_rate_per_100k": 336.95,
+    "national_share_pct": 10.48,
+    "rank_cases": 2,
+    "rank_rate": 2,
+    "categories": {
+      "persons": {
+        "count": 2984,
+        "pct": 22.64,
+        "rate_per_100k": 76.28
+      },
+      "property": {
+        "count": 9350,
+        "pct": 70.94,
+        "rate_per_100k": 239.02
+      },
+      "lawful_authority": {
+        "count": 843,
+        "pct": 6.4,
+        "rate_per_100k": 21.55
+      },
+      "local_acts": {
+        "count": 4,
+        "pct": 0.03,
+        "rate_per_100k": 0.1
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 70.94,
+    "centroid": [
+      7.24975,
+      8.96575
+    ],
+    "bbox": [
+      6.777192,
+      8.451874,
+      7.727935,
+      9.433715
+    ]
+  },
+  {
+    "state": "Adamawa",
+    "code": "NGAD",
+    "area_sqkm": 37945.0,
+    "population": 4360685,
+    "total_cases": 2259,
+    "crime_rate_per_100k": 51.8,
+    "national_share_pct": 1.8,
+    "rank_cases": 13,
+    "rank_rate": 11,
+    "categories": {
+      "persons": {
+        "count": 779,
+        "pct": 34.48,
+        "rate_per_100k": 17.86
+      },
+      "property": {
+        "count": 1417,
+        "pct": 62.73,
+        "rate_per_100k": 32.49
+      },
+      "lawful_authority": {
+        "count": 56,
+        "pct": 2.48,
+        "rate_per_100k": 1.28
+      },
+      "local_acts": {
+        "count": 7,
+        "pct": 0.31,
+        "rate_per_100k": 0.16
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 62.73,
+    "centroid": [
+      12.594,
+      9.24015
+    ],
+    "bbox": [
+      11.34234,
+      7.366449,
+      13.730558,
+      10.952443
+    ]
+  },
+  {
+    "state": "Akwa Ibom",
+    "code": "NGAK",
+    "area_sqkm": 6745.6,
+    "population": 5656597,
+    "total_cases": 1411,
+    "crime_rate_per_100k": 24.94,
+    "national_share_pct": 1.12,
+    "rank_cases": 22,
+    "rank_rate": 27,
+    "categories": {
+      "persons": {
+        "count": 840,
+        "pct": 59.53,
+        "rate_per_100k": 14.85
+      },
+      "property": {
+        "count": 333,
+        "pct": 23.6,
+        "rate_per_100k": 5.89
+      },
+      "lawful_authority": {
+        "count": 232,
+        "pct": 16.44,
+        "rate_per_100k": 4.1
+      },
+      "local_acts": {
+        "count": 6,
+        "pct": 0.43,
+        "rate_per_100k": 0.11
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 59.53,
+    "centroid": [
+      7.80091,
+      5.10715
+    ],
+    "bbox": [
+      7.463537,
+      4.471754,
+      8.343977,
+      5.523271
+    ]
+  },
+  {
+    "state": "Anambra",
+    "code": "NGAN",
+    "area_sqkm": 4746.5,
+    "population": 5667914,
+    "total_cases": 2534,
+    "crime_rate_per_100k": 44.71,
+    "national_share_pct": 2.01,
+    "rank_cases": 10,
+    "rank_rate": 14,
+    "categories": {
+      "persons": {
+        "count": 898,
+        "pct": 35.44,
+        "rate_per_100k": 15.84
+      },
+      "property": {
+        "count": 1413,
+        "pct": 55.76,
+        "rate_per_100k": 24.93
+      },
+      "lawful_authority": {
+        "count": 142,
+        "pct": 5.6,
+        "rate_per_100k": 2.51
+      },
+      "local_acts": {
+        "count": 81,
+        "pct": 3.2,
+        "rate_per_100k": 1.43
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 55.76,
+    "centroid": [
+      6.98336,
+      6.21526
+    ],
+    "bbox": [
+      6.633236,
+      5.69479,
+      7.343352,
+      6.80812
+    ]
+  },
+  {
+    "state": "Bauchi",
+    "code": "NGBA",
+    "area_sqkm": 48666.9,
+    "population": 6745302,
+    "total_cases": 2657,
+    "crime_rate_per_100k": 39.39,
+    "national_share_pct": 2.11,
+    "rank_cases": 8,
+    "rank_rate": 19,
+    "categories": {
+      "persons": {
+        "count": 812,
+        "pct": 30.56,
+        "rate_per_100k": 12.04
+      },
+      "property": {
+        "count": 1713,
+        "pct": 64.47,
+        "rate_per_100k": 25.4
+      },
+      "lawful_authority": {
+        "count": 118,
+        "pct": 4.44,
+        "rate_per_100k": 1.75
+      },
+      "local_acts": {
+        "count": 14,
+        "pct": 0.53,
+        "rate_per_100k": 0.21
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 64.47,
+    "centroid": [
+      9.76038,
+      10.50446
+    ],
+    "bbox": [
+      8.727779,
+      9.454992,
+      11.017127,
+      12.515629
+    ]
+  },
+  {
+    "state": "Bayelsa",
+    "code": "NGBY",
+    "area_sqkm": 9610.7,
+    "population": 2338146,
+    "total_cases": 1541,
+    "crime_rate_per_100k": 65.91,
+    "national_share_pct": 1.23,
+    "rank_cases": 21,
+    "rank_rate": 6,
+    "categories": {
+      "persons": {
+        "count": 612,
+        "pct": 39.71,
+        "rate_per_100k": 26.17
+      },
+      "property": {
+        "count": 837,
+        "pct": 54.32,
+        "rate_per_100k": 35.8
+      },
+      "lawful_authority": {
+        "count": 91,
+        "pct": 5.91,
+        "rate_per_100k": 3.89
+      },
+      "local_acts": {
+        "count": 1,
+        "pct": 0.06,
+        "rate_per_100k": 0.04
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 54.32,
+    "centroid": [
+      6.16549,
+      4.87559
+    ],
+    "bbox": [
+      5.373848,
+      4.27018,
+      6.625668,
+      5.381717
+    ]
+  },
+  {
+    "state": "Benue",
+    "code": "NGBE",
+    "area_sqkm": 31270.5,
+    "population": 5899699,
+    "total_cases": 1089,
+    "crime_rate_per_100k": 18.46,
+    "national_share_pct": 0.87,
+    "rank_cases": 28,
+    "rank_rate": 31,
+    "categories": {
+      "persons": {
+        "count": 463,
+        "pct": 42.52,
+        "rate_per_100k": 7.85
+      },
+      "property": {
+        "count": 497,
+        "pct": 45.64,
+        "rate_per_100k": 8.42
+      },
+      "lawful_authority": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      },
+      "local_acts": {
+        "count": 129,
+        "pct": 11.85,
+        "rate_per_100k": 2.19
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 45.64,
+    "centroid": [
+      8.47704,
+      7.13383
+    ],
+    "bbox": [
+      7.535184,
+      6.447278,
+      9.926257,
+      8.152931
+    ]
+  },
+  {
+    "state": "Borno",
+    "code": "NGBO",
+    "area_sqkm": 72309.2,
+    "population": 6046625,
+    "total_cases": 1174,
+    "crime_rate_per_100k": 19.42,
+    "national_share_pct": 0.93,
+    "rank_cases": 26,
+    "rank_rate": 30,
+    "categories": {
+      "persons": {
+        "count": 423,
+        "pct": 36.03,
+        "rate_per_100k": 7.0
+      },
+      "property": {
+        "count": 479,
+        "pct": 40.8,
+        "rate_per_100k": 7.92
+      },
+      "lawful_authority": {
+        "count": 3,
+        "pct": 0.26,
+        "rate_per_100k": 0.05
+      },
+      "local_acts": {
+        "count": 269,
+        "pct": 22.91,
+        "rate_per_100k": 4.45
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 40.8,
+    "centroid": [
+      13.20708,
+      12.17104
+    ],
+    "bbox": [
+      11.544216,
+      10.026856,
+      14.67808,
+      13.719617
+    ]
+  },
+  {
+    "state": "Cross River",
+    "code": "NGAK",
+    "area_sqkm": 21057.3,
+    "population": 3968419,
+    "total_cases": 2423,
+    "crime_rate_per_100k": 61.06,
+    "national_share_pct": 1.93,
+    "rank_cases": 11,
+    "rank_rate": 7,
+    "categories": {
+      "persons": {
+        "count": 1134,
+        "pct": 46.8,
+        "rate_per_100k": 28.58
+      },
+      "property": {
+        "count": 1154,
+        "pct": 47.63,
+        "rate_per_100k": 29.08
+      },
+      "lawful_authority": {
+        "count": 100,
+        "pct": 4.13,
+        "rate_per_100k": 2.52
+      },
+      "local_acts": {
+        "count": 35,
+        "pct": 1.44,
+        "rate_per_100k": 0.88
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 47.63,
+    "centroid": [
+      8.56881,
+      5.81091
+    ],
+    "bbox": [
+      7.857511,
+      4.688974,
+      9.471995,
+      6.89429
+    ]
+  },
+  {
+    "state": "Delta",
+    "code": "NGDE",
+    "area_sqkm": 17031.3,
+    "population": 5831307,
+    "total_cases": 7867,
+    "crime_rate_per_100k": 134.91,
+    "national_share_pct": 6.25,
+    "rank_cases": 3,
+    "rank_rate": 3,
+    "categories": {
+      "persons": {
+        "count": 3911,
+        "pct": 49.71,
+        "rate_per_100k": 67.07
+      },
+      "property": {
+        "count": 2502,
+        "pct": 31.8,
+        "rate_per_100k": 42.91
+      },
+      "lawful_authority": {
+        "count": 1202,
+        "pct": 15.28,
+        "rate_per_100k": 20.61
+      },
+      "local_acts": {
+        "count": 252,
+        "pct": 3.2,
+        "rate_per_100k": 4.32
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 49.71,
+    "centroid": [
+      5.77596,
+      5.77634
+    ],
+    "bbox": [
+      4.961653,
+      5.011323,
+      6.775709,
+      6.499921
+    ]
+  },
+  {
+    "state": "Ebonyi",
+    "code": "NGEB",
+    "area_sqkm": 6363.1,
+    "population": 2953388,
+    "total_cases": 1211,
+    "crime_rate_per_100k": 41.0,
+    "national_share_pct": 0.96,
+    "rank_cases": 24,
+    "rank_rate": 17,
+    "categories": {
+      "persons": {
+        "count": 572,
+        "pct": 47.23,
+        "rate_per_100k": 19.37
+      },
+      "property": {
+        "count": 595,
+        "pct": 49.13,
+        "rate_per_100k": 20.15
+      },
+      "lawful_authority": {
+        "count": 44,
+        "pct": 3.63,
+        "rate_per_100k": 1.49
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 49.13,
+    "centroid": [
+      8.04996,
+      6.27908
+    ],
+    "bbox": [
+      7.520532,
+      5.685816,
+      8.455018,
+      6.801212
+    ]
+  },
+  {
+    "state": "Edo",
+    "code": "NGED",
+    "area_sqkm": 19528.4,
+    "population": 4338397,
+    "total_cases": 1004,
+    "crime_rate_per_100k": 23.14,
+    "national_share_pct": 0.8,
+    "rank_cases": 30,
+    "rank_rate": 29,
+    "categories": {
+      "persons": {
+        "count": 697,
+        "pct": 69.42,
+        "rate_per_100k": 16.07
+      },
+      "property": {
+        "count": 307,
+        "pct": 30.58,
+        "rate_per_100k": 7.08
+      },
+      "lawful_authority": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 69.42,
+    "centroid": [
+      5.78294,
+      6.57703
+    ],
+    "bbox": [
+      5.009094,
+      5.741484,
+      6.721457,
+      7.593574
+    ]
+  },
+  {
+    "state": "Ekiti",
+    "code": "NGEK",
+    "area_sqkm": 5633.6,
+    "population": 3364262,
+    "total_cases": 1829,
+    "crime_rate_per_100k": 54.37,
+    "national_share_pct": 1.45,
+    "rank_cases": 17,
+    "rank_rate": 10,
+    "categories": {
+      "persons": {
+        "count": 718,
+        "pct": 39.26,
+        "rate_per_100k": 21.34
+      },
+      "property": {
+        "count": 1008,
+        "pct": 55.11,
+        "rate_per_100k": 29.96
+      },
+      "lawful_authority": {
+        "count": 103,
+        "pct": 5.63,
+        "rate_per_100k": 3.06
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 55.11,
+    "centroid": [
+      5.31169,
+      7.74068
+    ],
+    "bbox": [
+      4.866938,
+      7.290704,
+      5.787535,
+      8.088912
+    ]
+  },
+  {
+    "state": "Enugu",
+    "code": "NGEN",
+    "area_sqkm": 7658.4,
+    "population": 4532413,
+    "total_cases": 2104,
+    "crime_rate_per_100k": 46.42,
+    "national_share_pct": 1.67,
+    "rank_cases": 15,
+    "rank_rate": 13,
+    "categories": {
+      "persons": {
+        "count": 886,
+        "pct": 42.11,
+        "rate_per_100k": 19.55
+      },
+      "property": {
+        "count": 1094,
+        "pct": 52.0,
+        "rate_per_100k": 24.14
+      },
+      "lawful_authority": {
+        "count": 124,
+        "pct": 5.89,
+        "rate_per_100k": 2.74
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 52.0,
+    "centroid": [
+      7.31251,
+      6.56318
+    ],
+    "bbox": [
+      6.930733,
+      5.924256,
+      7.90591,
+      7.10514
+    ]
+  },
+  {
+    "state": "Gombe",
+    "code": "NGGO",
+    "area_sqkm": 17401.4,
+    "population": 3353547,
+    "total_cases": 2238,
+    "crime_rate_per_100k": 66.74,
+    "national_share_pct": 1.78,
+    "rank_cases": 14,
+    "rank_rate": 5,
+    "categories": {
+      "persons": {
+        "count": 513,
+        "pct": 22.92,
+        "rate_per_100k": 15.3
+      },
+      "property": {
+        "count": 1350,
+        "pct": 60.32,
+        "rate_per_100k": 40.26
+      },
+      "lawful_authority": {
+        "count": 19,
+        "pct": 0.85,
+        "rate_per_100k": 0.57
+      },
+      "local_acts": {
+        "count": 356,
+        "pct": 15.91,
+        "rate_per_100k": 10.62
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 60.32,
+    "centroid": [
+      11.30904,
+      10.4423
+    ],
+    "bbox": [
+      10.492153,
+      9.546745,
+      11.858639,
+      11.317246
+    ]
+  },
+  {
+    "state": "Imo",
+    "code": "NGIM",
+    "area_sqkm": 5069.7,
+    "population": 5569151,
+    "total_cases": 1930,
+    "crime_rate_per_100k": 34.66,
+    "national_share_pct": 1.53,
+    "rank_cases": 16,
+    "rank_rate": 21,
+    "categories": {
+      "persons": {
+        "count": 954,
+        "pct": 49.43,
+        "rate_per_100k": 17.13
+      },
+      "property": {
+        "count": 873,
+        "pct": 45.23,
+        "rate_per_100k": 15.68
+      },
+      "lawful_authority": {
+        "count": 103,
+        "pct": 5.34,
+        "rate_per_100k": 1.85
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 49.43,
+    "centroid": [
+      7.21455,
+      5.51335
+    ],
+    "bbox": [
+      6.639398,
+      5.193929,
+      7.43196,
+      5.932489
+    ]
+  },
+  {
+    "state": "Jigawa",
+    "code": "NGJI",
+    "area_sqkm": 23324.7,
+    "population": 5982151,
+    "total_cases": 646,
+    "crime_rate_per_100k": 10.8,
+    "national_share_pct": 0.51,
+    "rank_cases": 34,
+    "rank_rate": 34,
+    "categories": {
+      "persons": {
+        "count": 321,
+        "pct": 49.69,
+        "rate_per_100k": 5.37
+      },
+      "property": {
+        "count": 214,
+        "pct": 33.13,
+        "rate_per_100k": 3.58
+      },
+      "lawful_authority": {
+        "count": 37,
+        "pct": 5.73,
+        "rate_per_100k": 0.62
+      },
+      "local_acts": {
+        "count": 74,
+        "pct": 11.46,
+        "rate_per_100k": 1.24
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 49.69,
+    "centroid": [
+      9.2486,
+      12.13342
+    ],
+    "bbox": [
+      8.123782,
+      10.939026,
+      10.598804,
+      13.020213
+    ]
+  },
+  {
+    "state": "Kaduna",
+    "code": "NGKD",
+    "area_sqkm": 44047.4,
+    "population": 8479287,
+    "total_cases": 1006,
+    "crime_rate_per_100k": 11.86,
+    "national_share_pct": 0.8,
+    "rank_cases": 29,
+    "rank_rate": 33,
+    "categories": {
+      "persons": {
+        "count": 338,
+        "pct": 33.6,
+        "rate_per_100k": 3.99
+      },
+      "property": {
+        "count": 502,
+        "pct": 49.9,
+        "rate_per_100k": 5.92
+      },
+      "lawful_authority": {
+        "count": 129,
+        "pct": 12.82,
+        "rate_per_100k": 1.52
+      },
+      "local_acts": {
+        "count": 37,
+        "pct": 3.68,
+        "rate_per_100k": 0.44
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 49.9,
+    "centroid": [
+      7.39245,
+      10.62402
+    ],
+    "bbox": [
+      6.083301,
+      9.000754,
+      8.797529,
+      11.523874
+    ]
+  },
+  {
+    "state": "Kano",
+    "code": "NGKN",
+    "area_sqkm": 20219.7,
+    "population": 13478802,
+    "total_cases": 4917,
+    "crime_rate_per_100k": 36.48,
+    "national_share_pct": 3.91,
+    "rank_cases": 4,
+    "rank_rate": 20,
+    "categories": {
+      "persons": {
+        "count": 1981,
+        "pct": 40.29,
+        "rate_per_100k": 14.7
+      },
+      "property": {
+        "count": 2375,
+        "pct": 48.3,
+        "rate_per_100k": 17.62
+      },
+      "lawful_authority": {
+        "count": 318,
+        "pct": 6.47,
+        "rate_per_100k": 2.36
+      },
+      "local_acts": {
+        "count": 243,
+        "pct": 4.94,
+        "rate_per_100k": 1.8
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 48.3,
+    "centroid": [
+      8.55734,
+      11.55267
+    ],
+    "bbox": [
+      7.677796,
+      10.544885,
+      9.363615,
+      12.607426
+    ]
+  },
+  {
+    "state": "Katsina",
+    "code": "NGKT",
+    "area_sqkm": 23857.3,
+    "population": 8046663,
+    "total_cases": 120,
+    "crime_rate_per_100k": 1.49,
+    "national_share_pct": 0.1,
+    "rank_cases": 37,
+    "rank_rate": 37,
+    "categories": {
+      "persons": {
+        "count": 51,
+        "pct": 42.5,
+        "rate_per_100k": 0.63
+      },
+      "property": {
+        "count": 65,
+        "pct": 54.17,
+        "rate_per_100k": 0.81
+      },
+      "lawful_authority": {
+        "count": 4,
+        "pct": 3.33,
+        "rate_per_100k": 0.05
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 54.17,
+    "centroid": [
+      7.81074,
+      12.16551
+    ],
+    "bbox": [
+      6.856546,
+      11.13211,
+      9.04967,
+      13.33949
+    ]
+  },
+  {
+    "state": "Kebbi",
+    "code": "NGKE",
+    "area_sqkm": 36256.0,
+    "population": 4566927,
+    "total_cases": 1155,
+    "crime_rate_per_100k": 25.29,
+    "national_share_pct": 0.92,
+    "rank_cases": 27,
+    "rank_rate": 26,
+    "categories": {
+      "persons": {
+        "count": 656,
+        "pct": 56.8,
+        "rate_per_100k": 14.36
+      },
+      "property": {
+        "count": 370,
+        "pct": 32.03,
+        "rate_per_100k": 8.1
+      },
+      "lawful_authority": {
+        "count": 21,
+        "pct": 1.82,
+        "rate_per_100k": 0.46
+      },
+      "local_acts": {
+        "count": 108,
+        "pct": 9.35,
+        "rate_per_100k": 2.36
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 56.8,
+    "centroid": [
+      4.78056,
+      11.53196
+    ],
+    "bbox": [
+      3.496037,
+      10.086687,
+      6.150435,
+      13.265396
+    ]
+  },
+  {
+    "state": "Kogi",
+    "code": "NGKO",
+    "area_sqkm": 28660.3,
+    "population": 4596500,
+    "total_cases": 798,
+    "crime_rate_per_100k": 17.36,
+    "national_share_pct": 0.63,
+    "rank_cases": 33,
+    "rank_rate": 32,
+    "categories": {
+      "persons": {
+        "count": 294,
+        "pct": 36.84,
+        "rate_per_100k": 6.4
+      },
+      "property": {
+        "count": 480,
+        "pct": 60.15,
+        "rate_per_100k": 10.44
+      },
+      "lawful_authority": {
+        "count": 17,
+        "pct": 2.13,
+        "rate_per_100k": 0.37
+      },
+      "local_acts": {
+        "count": 7,
+        "pct": 0.88,
+        "rate_per_100k": 0.15
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 60.15,
+    "centroid": [
+      6.69028,
+      7.54143
+    ],
+    "bbox": [
+      5.342508,
+      6.539675,
+      7.81956,
+      8.740615
+    ]
+  },
+  {
+    "state": "Kwara",
+    "code": "NGKW",
+    "area_sqkm": 33878.8,
+    "population": 3280692,
+    "total_cases": 984,
+    "crime_rate_per_100k": 29.99,
+    "national_share_pct": 0.78,
+    "rank_cases": 31,
+    "rank_rate": 24,
+    "categories": {
+      "persons": {
+        "count": 327,
+        "pct": 33.23,
+        "rate_per_100k": 9.97
+      },
+      "property": {
+        "count": 614,
+        "pct": 62.4,
+        "rate_per_100k": 18.72
+      },
+      "lawful_authority": {
+        "count": 21,
+        "pct": 2.13,
+        "rate_per_100k": 0.64
+      },
+      "local_acts": {
+        "count": 22,
+        "pct": 2.24,
+        "rate_per_100k": 0.67
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 62.4,
+    "centroid": [
+      3.94719,
+      9.05028
+    ],
+    "bbox": [
+      2.729175,
+      7.984898,
+      6.21106,
+      10.181114
+    ]
+  },
+  {
+    "state": "Lagos",
+    "code": "NGLA",
+    "area_sqkm": 3610.1,
+    "population": 12922780,
+    "total_cases": 45385,
+    "crime_rate_per_100k": 351.2,
+    "national_share_pct": 36.08,
+    "rank_cases": 1,
+    "rank_rate": 1,
+    "categories": {
+      "persons": {
+        "count": 15426,
+        "pct": 33.99,
+        "rate_per_100k": 119.37
+      },
+      "property": {
+        "count": 22885,
+        "pct": 50.42,
+        "rate_per_100k": 177.09
+      },
+      "lawful_authority": {
+        "count": 6768,
+        "pct": 14.91,
+        "rate_per_100k": 52.37
+      },
+      "local_acts": {
+        "count": 306,
+        "pct": 0.67,
+        "rate_per_100k": 2.37
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 50.42,
+    "centroid": [
+      3.45,
+      6.58
+    ],
+    "bbox": [
+      2.701915,
+      6.367747,
+      4.358415,
+      6.701683
+    ]
+  },
+  {
+    "state": "Nassarawa",
+    "code": "NGNA",
+    "area_sqkm": 26813.7,
+    "population": 2592780,
+    "total_cases": 1320,
+    "crime_rate_per_100k": 50.91,
+    "national_share_pct": 1.05,
+    "rank_cases": 23,
+    "rank_rate": 12,
+    "categories": {
+      "persons": {
+        "count": 489,
+        "pct": 37.05,
+        "rate_per_100k": 18.86
+      },
+      "property": {
+        "count": 725,
+        "pct": 54.92,
+        "rate_per_100k": 27.96
+      },
+      "lawful_authority": {
+        "count": 14,
+        "pct": 1.06,
+        "rate_per_100k": 0.54
+      },
+      "local_acts": {
+        "count": 92,
+        "pct": 6.97,
+        "rate_per_100k": 3.55
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 54.92,
+    "centroid": [
+      8.64491,
+      8.53263
+    ],
+    "bbox": [
+      6.932413,
+      7.771762,
+      9.633393,
+      9.405342
+    ]
+  },
+  {
+    "state": "Niger",
+    "code": "NGNI",
+    "area_sqkm": 71958.7,
+    "population": 5733023,
+    "total_cases": 1769,
+    "crime_rate_per_100k": 30.86,
+    "national_share_pct": 1.41,
+    "rank_cases": 19,
+    "rank_rate": 22,
+    "categories": {
+      "persons": {
+        "count": 528,
+        "pct": 29.85,
+        "rate_per_100k": 9.21
+      },
+      "property": {
+        "count": 1083,
+        "pct": 61.22,
+        "rate_per_100k": 18.89
+      },
+      "lawful_authority": {
+        "count": 53,
+        "pct": 3.0,
+        "rate_per_100k": 0.92
+      },
+      "local_acts": {
+        "count": 105,
+        "pct": 5.94,
+        "rate_per_100k": 1.83
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 61.22,
+    "centroid": [
+      5.64916,
+      10.06665
+    ],
+    "bbox": [
+      3.58361,
+      8.182351,
+      7.389908,
+      11.370333
+    ]
+  },
+  {
+    "state": "Ogun",
+    "code": "NGOG",
+    "area_sqkm": 16707.2,
+    "population": 5378078,
+    "total_cases": 2379,
+    "crime_rate_per_100k": 44.24,
+    "national_share_pct": 1.89,
+    "rank_cases": 12,
+    "rank_rate": 15,
+    "categories": {
+      "persons": {
+        "count": 1122,
+        "pct": 47.16,
+        "rate_per_100k": 20.86
+      },
+      "property": {
+        "count": 1112,
+        "pct": 46.74,
+        "rate_per_100k": 20.68
+      },
+      "lawful_authority": {
+        "count": 145,
+        "pct": 6.09,
+        "rate_per_100k": 2.7
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 47.16,
+    "centroid": [
+      3.68825,
+      6.98198
+    ],
+    "bbox": [
+      2.64998,
+      6.302309,
+      4.60536,
+      7.982464
+    ]
+  },
+  {
+    "state": "Ondo",
+    "code": "NGON",
+    "area_sqkm": 15262.2,
+    "population": 4800155,
+    "total_cases": 3493,
+    "crime_rate_per_100k": 72.77,
+    "national_share_pct": 2.78,
+    "rank_cases": 5,
+    "rank_rate": 4,
+    "categories": {
+      "persons": {
+        "count": 1037,
+        "pct": 29.69,
+        "rate_per_100k": 21.6
+      },
+      "property": {
+        "count": 1934,
+        "pct": 55.37,
+        "rate_per_100k": 40.29
+      },
+      "lawful_authority": {
+        "count": 521,
+        "pct": 14.92,
+        "rate_per_100k": 10.85
+      },
+      "local_acts": {
+        "count": 1,
+        "pct": 0.03,
+        "rate_per_100k": 0.02
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 55.37,
+    "centroid": [
+      5.16366,
+      6.83032
+    ],
+    "bbox": [
+      4.372759,
+      5.910917,
+      6.033887,
+      7.758226
+    ]
+  },
+  {
+    "state": "Osun",
+    "code": "NGOS",
+    "area_sqkm": 8642.6,
+    "population": 4845129,
+    "total_cases": 1188,
+    "crime_rate_per_100k": 24.52,
+    "national_share_pct": 0.94,
+    "rank_cases": 25,
+    "rank_rate": 28,
+    "categories": {
+      "persons": {
+        "count": 258,
+        "pct": 21.72,
+        "rate_per_100k": 5.32
+      },
+      "property": {
+        "count": 540,
+        "pct": 45.45,
+        "rate_per_100k": 11.15
+      },
+      "lawful_authority": {
+        "count": 57,
+        "pct": 4.8,
+        "rate_per_100k": 1.18
+      },
+      "local_acts": {
+        "count": 333,
+        "pct": 28.03,
+        "rate_per_100k": 6.87
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 45.45,
+    "centroid": [
+      4.42039,
+      7.49784
+    ],
+    "bbox": [
+      4.041759,
+      6.970284,
+      5.063907,
+      8.083067
+    ]
+  },
+  {
+    "state": "Oyo",
+    "code": "NGOY",
+    "area_sqkm": 27694.2,
+    "population": 8090326,
+    "total_cases": 3443,
+    "crime_rate_per_100k": 42.56,
+    "national_share_pct": 2.74,
+    "rank_cases": 6,
+    "rank_rate": 16,
+    "categories": {
+      "persons": {
+        "count": 1377,
+        "pct": 39.99,
+        "rate_per_100k": 17.02
+      },
+      "property": {
+        "count": 1752,
+        "pct": 50.89,
+        "rate_per_100k": 21.66
+      },
+      "lawful_authority": {
+        "count": 314,
+        "pct": 9.12,
+        "rate_per_100k": 3.88
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 50.89,
+    "centroid": [
+      3.59692,
+      8.00198
+    ],
+    "bbox": [
+      2.694523,
+      7.072566,
+      4.565843,
+      9.184991
+    ]
+  },
+  {
+    "state": "Plateau",
+    "code": "NGPL",
+    "area_sqkm": 26777.7,
+    "population": 4302391,
+    "total_cases": 2553,
+    "crime_rate_per_100k": 59.34,
+    "national_share_pct": 2.03,
+    "rank_cases": 9,
+    "rank_rate": 8,
+    "categories": {
+      "persons": {
+        "count": 470,
+        "pct": 18.41,
+        "rate_per_100k": 10.92
+      },
+      "property": {
+        "count": 1938,
+        "pct": 75.91,
+        "rate_per_100k": 45.04
+      },
+      "lawful_authority": {
+        "count": 145,
+        "pct": 5.68,
+        "rate_per_100k": 3.37
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 75.91,
+    "centroid": [
+      9.48527,
+      9.31477
+    ],
+    "bbox": [
+      8.55317,
+      8.363185,
+      10.678678,
+      10.392183
+    ]
+  },
+  {
+    "state": "Rivers",
+    "code": "NGRI",
+    "area_sqkm": 10073.5,
+    "population": 7536301,
+    "total_cases": 2994,
+    "crime_rate_per_100k": 39.73,
+    "national_share_pct": 2.38,
+    "rank_cases": 7,
+    "rank_rate": 18,
+    "categories": {
+      "persons": {
+        "count": 1683,
+        "pct": 56.21,
+        "rate_per_100k": 22.33
+      },
+      "property": {
+        "count": 897,
+        "pct": 29.96,
+        "rate_per_100k": 11.9
+      },
+      "lawful_authority": {
+        "count": 271,
+        "pct": 9.05,
+        "rate_per_100k": 3.6
+      },
+      "local_acts": {
+        "count": 143,
+        "pct": 4.78,
+        "rate_per_100k": 1.9
+      }
+    },
+    "dominant_category": "Persons",
+    "dominant_pct": 56.21,
+    "centroid": [
+      6.99675,
+      4.8939
+    ],
+    "bbox": [
+      6.386045,
+      4.310155,
+      7.593226,
+      5.728362
+    ]
+  },
+  {
+    "state": "Sokoto",
+    "code": "NGSO",
+    "area_sqkm": 32249.7,
+    "population": 5135525,
+    "total_cases": 1580,
+    "crime_rate_per_100k": 30.77,
+    "national_share_pct": 1.26,
+    "rank_cases": 20,
+    "rank_rate": 23,
+    "categories": {
+      "persons": {
+        "count": 496,
+        "pct": 31.39,
+        "rate_per_100k": 9.66
+      },
+      "property": {
+        "count": 1055,
+        "pct": 66.77,
+        "rate_per_100k": 20.54
+      },
+      "lawful_authority": {
+        "count": 29,
+        "pct": 1.84,
+        "rate_per_100k": 0.56
+      },
+      "local_acts": {
+        "count": 0,
+        "pct": 0.0,
+        "rate_per_100k": 0.0
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 66.77,
+    "centroid": [
+      5.04668,
+      12.52198
+    ],
+    "bbox": [
+      4.127608,
+      11.572143,
+      6.78731,
+      13.892008
+    ]
+  },
+  {
+    "state": "Taraba",
+    "code": "NGTA",
+    "area_sqkm": 58673.3,
+    "population": 3147864,
+    "total_cases": 1817,
+    "crime_rate_per_100k": 57.72,
+    "national_share_pct": 1.44,
+    "rank_cases": 18,
+    "rank_rate": 9,
+    "categories": {
+      "persons": {
+        "count": 719,
+        "pct": 39.57,
+        "rate_per_100k": 22.84
+      },
+      "property": {
+        "count": 998,
+        "pct": 54.93,
+        "rate_per_100k": 31.7
+      },
+      "lawful_authority": {
+        "count": 55,
+        "pct": 3.03,
+        "rate_per_100k": 1.75
+      },
+      "local_acts": {
+        "count": 45,
+        "pct": 2.48,
+        "rate_per_100k": 1.43
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 54.93,
+    "centroid": [
+      10.80624,
+      7.64899
+    ],
+    "bbox": [
+      9.124617,
+      6.502454,
+      11.90095,
+      9.678735
+    ]
+  },
+  {
+    "state": "Yobe",
+    "code": "NGYO",
+    "area_sqkm": 44956.3,
+    "population": 3402506,
+    "total_cases": 944,
+    "crime_rate_per_100k": 27.74,
+    "national_share_pct": 0.75,
+    "rank_cases": 32,
+    "rank_rate": 25,
+    "categories": {
+      "persons": {
+        "count": 398,
+        "pct": 42.16,
+        "rate_per_100k": 11.7
+      },
+      "property": {
+        "count": 520,
+        "pct": 55.08,
+        "rate_per_100k": 15.28
+      },
+      "lawful_authority": {
+        "count": 18,
+        "pct": 1.91,
+        "rate_per_100k": 0.53
+      },
+      "local_acts": {
+        "count": 8,
+        "pct": 0.85,
+        "rate_per_100k": 0.24
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 55.08,
+    "centroid": [
+      11.55584,
+      12.09851
+    ],
+    "bbox": [
+      9.674886,
+      10.579572,
+      12.489604,
+      13.376091
+    ]
+  },
+  {
+    "state": "Zamfara",
+    "code": "NGZA",
+    "area_sqkm": 33466.7,
+    "population": 4649330,
+    "total_cases": 483,
+    "crime_rate_per_100k": 10.39,
+    "national_share_pct": 0.38,
+    "rank_cases": 35,
+    "rank_rate": 35,
+    "categories": {
+      "persons": {
+        "count": 157,
+        "pct": 32.51,
+        "rate_per_100k": 3.38
+      },
+      "property": {
+        "count": 303,
+        "pct": 62.73,
+        "rate_per_100k": 6.52
+      },
+      "lawful_authority": {
+        "count": 6,
+        "pct": 1.24,
+        "rate_per_100k": 0.13
+      },
+      "local_acts": {
+        "count": 17,
+        "pct": 3.52,
+        "rate_per_100k": 0.37
+      }
+    },
+    "dominant_category": "Property",
+    "dominant_pct": 62.73,
+    "centroid": [
+      6.29621,
+      11.64914
+    ],
+    "bbox": [
+      4.943487,
+      10.864902,
+      7.242018,
+      13.168847
+    ]
+  }
+]

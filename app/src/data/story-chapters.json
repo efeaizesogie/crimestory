@@ -1,0 +1,370 @@
+[
+  {
+    "id": "ch-01",
+    "number": 1,
+    "tag": "01",
+    "title": "THE BIG PICTURE",
+    "eyebrow": "THE BIG PICTURE",
+    "headline": "WHERE WAS CRIME REPORTED?",
+    "paragraphs": [
+      "In 2016, 125,790 criminal offences were reported across Nigeria’s 36 states and the Federal Capital Territory.",
+      "But the national total hides a much more uneven geography.",
+      "Lagos alone accounted for 45,385 reported offences, more than one-third of all cases recorded nationally.",
+      "The Federal Capital Territory followed with 13,181, while Delta recorded 7,867.",
+      "Together, these three areas accounted for more than half of all reported offences in the dataset."
+    ],
+    "instruction": "Hover over a state to explore the numbers.",
+    "keyStat": {
+      "value": "125,790",
+      "label": "reported offences"
+    },
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "total_cases",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-02",
+    "number": 2,
+    "tag": "02",
+    "title": "POPULATION",
+    "eyebrow": "CHANGE THE DENOMINATOR",
+    "headline": "THE DENOMINATOR CHANGES THE STORY",
+    "paragraphs": [
+      "Raw counts favour populous places.",
+      "A large population creates more opportunities for offences to be reported, so comparing states by total cases alone can obscure differences in scale.",
+      "Rates allow us to ask a different question:",
+      "How many reported offences were recorded relative to the size of the population?",
+      "Transition:",
+      "Watch the map change.",
+      "Map:",
+      "TOTAL → RATE PER 100,000",
+      "Supporting explanation:",
+      "The geography shifts when population enters the equation.",
+      "This does not make one measure \"correct\" and the other \"wrong.\"",
+      "They answer different questions."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "crime_rate",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-03",
+    "number": 3,
+    "tag": "03",
+    "title": "CONCENTRATION",
+    "eyebrow": "CONCENTRATION",
+    "headline": "THREE PLACES DOMINATE THE COUNT",
+    "paragraphs": [
+      "Lagos, the Federal Capital Territory and Delta together account for more than half of all reported offences in the dataset.",
+      "But concentration in the raw count does not automatically mean these places had the highest rate of reported offences.",
+      "The distinction matters.",
+      "Interaction:",
+      "Allow the reader to hover or click the three highlighted locations.",
+      "Display:",
+      "Lagos",
+      "45,385",
+      "FCT",
+      "13,181",
+      "Delta",
+      "7,867",
+      "Use proportional symbols.",
+      "Let the circles grow smoothly into position."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "concentration",
+      "focusState": "Lagos",
+      "showSymbols": true,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-04",
+    "number": 4,
+    "tag": "04",
+    "title": "FOUR CATEGORIES",
+    "eyebrow": "THE TYPE OF OFFENCE MATTERS",
+    "headline": "FOUR CRIMES.",
+    "paragraphs": [
+      "The national total is made up of four broad offence categories.",
+      "PROPERTY",
+      "65,397",
+      "52.0%",
+      "PERSONS",
+      "45,554",
+      "36.2%",
+      "LAWFUL AUTHORITY",
+      "12,144",
+      "9.7%",
+      "LOCAL ACTS",
+      "2,695",
+      "2.1%",
+      "Transition statement:",
+      "The geography changes when the definition of crime changes.",
+      "Interactive behavior:",
+      "Allow the reader to switch between the four categories.",
+      "When a category is selected:",
+      "- map changes",
+      "- legend changes",
+      "- category color becomes dominant",
+      "- supporting statistic updates",
+      "- chart animates",
+      "- state rankings update"
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "categories_overview",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-05",
+    "number": 5,
+    "tag": "05",
+    "title": "PERSONS",
+    "eyebrow": "PERSONS",
+    "headline": "CRIMES AGAINST PERSONS",
+    "paragraphs": [
+      "45,554 reported offences in the national dataset were classified as offences against persons.",
+      "The category includes crimes involving human beings, including murder, manslaughter, infanticide, concealment of birth, rape and physical abuse.",
+      "Map:",
+      "PERSONS RATE PER 100,000",
+      "Use the established crime-red visual language."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "rate_persons",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-06",
+    "number": 6,
+    "tag": "06",
+    "title": "PROPERTY",
+    "eyebrow": "PROPERTY",
+    "headline": "PROPERTY OFFENCES DOMINATE THE NATIONAL TOTAL",
+    "paragraphs": [
+      "65,397 reported offences were classified as offences against property.",
+      "That represents 52.0% of the national total.",
+      "The category includes offences involving belongings and property, including stealing, receiving stolen property, false pretence, robbery, burglary and housebreaking.",
+      "Map:",
+      "PROPERTY RATE PER 100,000",
+      "Use orange as the category signal."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "rate_property",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-07",
+    "number": 7,
+    "tag": "07",
+    "title": "LAWFUL AUTHORITY",
+    "eyebrow": "LAWFUL AUTHORITY",
+    "headline": "OFFENCES AGAINST LAWFUL AUTHORITY",
+    "paragraphs": [
+      "12,144 reported offences were classified as offences against lawful authority.",
+      "These include offences against establishments of law, such as tax-related offences.",
+      "Map:",
+      "LAWFUL AUTHORITY RATE PER 100,000",
+      "Use teal."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "rate_authority",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-08",
+    "number": 8,
+    "tag": "08",
+    "title": "LOCAL ACTS",
+    "eyebrow": "LOCAL ACTS",
+    "headline": "LOCAL ACTS",
+    "paragraphs": [
+      "2,695 reported offences were classified as offences against local acts.",
+      "These refer to offences against laws that cannot be enforced outside Nigeria, including legislation such as the Liquor Act or Firearms Act.",
+      "Map:",
+      "LOCAL ACTS RATE PER 100,000",
+      "Use purple."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "rate_local",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-09",
+    "number": 9,
+    "tag": "09",
+    "title": "STATE SIGNATURES",
+    "eyebrow": "STATE PROFILES",
+    "headline": "EVERY STATE HAS A DIFFERENT SIGNATURE",
+    "paragraphs": [
+      "The national profile is useful, but it can hide how different individual states are.",
+      "For each state, compare the composition of reported offences.",
+      "Which category contributes the largest share?",
+      "Which states are strongly property-heavy?",
+      "Which states have a larger share of offences against persons?",
+      "Which states depart most clearly from the national profile?",
+      "Interaction:",
+      "Click a state.",
+      "Reveal a compact state profile.",
+      "Example structure:",
+      "STATE NAME",
+      "Total reported offences",
+      "Rate per 100,000",
+      "Then a horizontal composition chart:",
+      "Property",
+      "████████████",
+      "Persons",
+      "████████",
+      "Authority",
+      "███",
+      "Local Acts",
+      "█",
+      "The chart should animate when a state is selected."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "dominant_category",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-10",
+    "number": 10,
+    "tag": "10",
+    "title": "DIVERGENCE",
+    "eyebrow": "DIVERGENCE",
+    "headline": "WHERE STATES DEPART FROM THE NATIONAL PROFILE",
+    "paragraphs": [
+      "Property offences represented 52.0% of reported offences nationally.",
+      "But individual states do not necessarily follow that pattern.",
+      "This map shows how far each state's property share differs from the national 52.0% benchmark.",
+      "Positive values:",
+      "More property-heavy than the national profile.",
+      "Negative values:",
+      "Less property-heavy than the national profile.",
+      "Neutral:",
+      "Close to the national profile.",
+      "Map:",
+      "DIVERGENCE FROM NATIONAL PROPERTY PROFILE",
+      "Use the established diverging color scale.",
+      "Do not describe a state as \"better\" or \"worse.\"",
+      "This is a difference in composition, not a safety ranking."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "dimension_scatter",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": true
+    }
+  },
+  {
+    "id": "ch-11",
+    "number": 11,
+    "tag": "11",
+    "title": "THERE IS NO SINGLE MAP",
+    "eyebrow": "THERE IS NO SINGLE MAP",
+    "headline": "THERE IS NO SINGLE MAP OF CRIME",
+    "paragraphs": [
+      "Raw counts tell us where the most offences were reported.",
+      "Rates tell us where reported offences were highest relative to population.",
+      "Crime categories reveal different spatial patterns.",
+      "State profiles reveal different compositions.",
+      "The map changes because the question changes.",
+      "Final interaction:",
+      "Allow the reader to move between:",
+      "COUNT",
+      "RATE",
+      "PERSONS",
+      "PROPERTY",
+      "AUTHORITY",
+      "LOCAL ACTS",
+      "PROFILE",
+      "and observe how Nigeria changes.",
+      "Final statement:",
+      "The geography of reported crime is not one map.",
+      "It is a collection of different patterns revealed by the question we choose to ask."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "exploration",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  },
+  {
+    "id": "ch-12",
+    "number": 12,
+    "tag": "12",
+    "title": "LIMITATIONS",
+    "eyebrow": "READ THE DATA CAREFULLY",
+    "headline": "A MAP OF REPORTED CRIME IS NOT A MAP OF ALL CRIME.",
+    "paragraphs": [
+      "These data represent reported offences recorded in the 2016 dataset.",
+      "They do not capture every offence that occurred.",
+      "Differences in reporting behaviour, policing, access to authorities, recording practices and other factors may influence the observed geography.",
+      "Therefore, a high number of reported offences should not automatically be interpreted as proof that a place was more dangerous, nor should a low number be interpreted as proof that it was safer.",
+      "The maps describe the geography of reported offences.",
+      "They do not provide a complete measure of public safety."
+    ],
+    "instruction": null,
+    "keyStat": null,
+    "insight": null,
+    "mapConfig": {
+      "mapMode": "methodology",
+      "focusState": null,
+      "showSymbols": false,
+      "showScatter": false
+    }
+  }
+]

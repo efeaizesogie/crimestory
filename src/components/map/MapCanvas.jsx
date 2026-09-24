@@ -174,11 +174,14 @@ export function MapCanvas({
           {/* State Polygons with Morphing Colors */}
           {geoData?.features && pathGenerator && (
             <g className="states-layer">
-              {geoData.features.map(f => {
+              {geoData.features.map((f, idx) => {
                 const p = f.properties;
                 const isHovered = hoveredState?.name === p.name;
                 const isSelected = selectedState?.name === p.name;
                 const fillColor = getStateFillColor(f, mode);
+
+                // Reveal timing synchronized with the editorial text wave (140ms base + subtle micro-stagger)
+                const revealDelay = 140 + (idx % 7) * 20;
 
                 let strokeColor = '#2F363F';
                 let strokeWidth = 0.8;
@@ -201,7 +204,7 @@ export function MapCanvas({
                     opacity={isSelected ? 1.0 : (selectedState ? 0.45 : (isHovered ? 1.0 : 0.92))}
                     style={{
                       cursor: 'pointer',
-                      transition: 'fill 850ms cubic-bezier(0.22, 1, 0.36, 1), stroke 250ms ease, opacity 400ms ease'
+                      transition: `fill 750ms cubic-bezier(0.22, 1, 0.36, 1) ${revealDelay}ms, stroke 200ms ease 0ms, opacity 400ms ease`
                     }}
                     onMouseEnter={(e) => handleStateMouseEnter(f, e)}
                     onMouseMove={handleStateMouseMove}

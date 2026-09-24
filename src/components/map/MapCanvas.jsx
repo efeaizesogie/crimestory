@@ -7,45 +7,6 @@ import { MapCallouts } from './MapCallouts';
 import { ProportionalSymbols } from './ProportionalSymbols';
 import { Tooltip } from '../interface/Tooltip';
 
-// Geographic camera states for each chapter section
-const CHAPTER_CAMERAS = {
-  // Chapter 01: Establish national overview
-  0: { coords: null, zoom: 1.0 },
-
-  // Chapter 02: Population & Rates - Lagos & FCT urban corridor
-  1: { coords: [5.4, 7.8], zoom: 1.15 },
-
-  // Chapter 03: Concentration - Lagos, Delta & FCT dominance
-  2: { coords: [5.2, 7.2], zoom: 1.25 },
-
-  // Chapter 04: Four Categories - Pull back to national overview for category comparison
-  3: { coords: null, zoom: 1.0 },
-
-  // Chapter 05: Crimes Against Persons - South/Central belt focus
-  4: { coords: [6.6, 6.6], zoom: 1.14 },
-
-  // Chapter 06: Offences vs Property - FCT & Lagos axis
-  5: { coords: [5.8, 8.0], zoom: 1.18 },
-
-  // Chapter 07: Lawful Authority - Institutional/tax hubs
-  6: { coords: [5.4, 7.5], zoom: 1.16 },
-
-  // Chapter 08: Local Acts - Camera glides northeast to Gombe State
-  7: { coords: [10.8, 10.4], zoom: 1.28 },
-
-  // Chapter 09: State Signatures - Balanced national canvas for state exploration
-  8: { coords: null, zoom: 1.0 },
-
-  // Chapter 10: Property Divergence - National overview
-  9: { coords: null, zoom: 1.0 },
-
-  // Chapter 11: Synthesis & Scatter - Broad national perspective
-  10: { coords: null, zoom: 1.0 },
-
-  // Chapter 12: Data Limitations - Settle national context
-  11: { coords: null, zoom: 1.0 }
-};
-
 export function MapCanvas({
   geoData,
   mode,
@@ -60,7 +21,6 @@ export function MapCanvas({
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState({ width: 850, height: 720 });
   const [zoomTransform, setZoomTransform] = useState({ k: 1, x: 0, y: 0 });
-  const [isManualZoom, setIsManualZoom] = useState(false);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
   // Update dimensions on container resize
@@ -99,41 +59,8 @@ export function MapCanvas({
     return { projection: proj, pathGenerator: path };
   }, [geoData, dimensions]);
 
-  // Cinematic camera transition synchronized with active chapter
-  useEffect(() => {
-    if (!projection || !dimensions.width || !dimensions.height) return;
-
-    // Respect user's prefers-reduced-motion setting
-    const prefersReduced = typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReduced) {
-      setZoomTransform({ k: 1, x: 0, y: 0 });
-      return;
-    }
-
-    setIsManualZoom(false);
-
-    const cam = CHAPTER_CAMERAS[activeChapter] || { coords: null, zoom: 1.0 };
-    const targetK = cam.zoom;
-    const cx = dimensions.width / 2;
-    const cy = dimensions.height / 2;
-
-    if (!cam.coords || targetK <= 1.0) {
-      setZoomTransform({ k: 1, x: 0, y: 0 });
-    } else {
-      const pt = projection(cam.coords);
-      if (pt) {
-        const targetX = cx - targetK * pt[0];
-        const targetY = cy - targetK * pt[1];
-        setZoomTransform({ k: targetK, x: targetX, y: targetY });
-      }
-    }
-  }, [activeChapter, projection, dimensions]);
-
   // Handle Zoom In / Zoom Out / Reset
   const handleZoom = (factor) => {
-    setIsManualZoom(true);
     setZoomTransform(prev => {
       const nextK = Math.min(Math.max(prev.k * factor, 0.8), 4.5);
       const cx = dimensions.width / 2;
@@ -145,7 +72,6 @@ export function MapCanvas({
   };
 
   const handleReset = () => {
-    setIsManualZoom(true);
     setZoomTransform({ k: 1, x: 0, y: 0 });
     setSelectedState(null);
   };
@@ -226,9 +152,8 @@ export function MapCanvas({
         <g
           transform={`translate(${zoomTransform.x}, ${zoomTransform.y}) scale(${zoomTransform.k})`}
           style={{
-            transition: isManualZoom
-              ? 'transform 350ms cubic-bezier(0.22, 1, 0.36, 1)'
-              : 'transform 1200ms cubic-bezier(0.22, 1, 0.36, 1)'
+            transformOrigin: 'center center',
+            transition: 'transform 350ms cubic-bezier(0.22, 1, 0.36, 1)'
           }}
         >
           {/* Base Background Glow for Nigeria */}

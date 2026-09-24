@@ -61,30 +61,55 @@ export function MapLegend({ mode }) {
   }
 
   const palette = PALETTES[mode] || PALETTES.TOTAL_CASES;
+  const numLabels = palette.labels ? palette.labels.length : 0;
 
   return (
     <div className="map-legend-box">
       <div className="legend-title">{palette.name.toUpperCase()}</div>
-      <div className="legend-subtitle">{palette.unit}</div>
+      {palette.subtitle && (
+        <div className="legend-subtitle">{palette.subtitle}</div>
+      )}
 
       {/* 5-class color bar */}
-      <div className="legend-ramp">
-        {palette.colors.map((col, idx) => (
-          <div
-            key={idx}
-            className="legend-ramp-swatch"
-            style={{ backgroundColor: col }}
-          />
-        ))}
+      <div className="legend-ramp" role="img" aria-label={`Classification scale for ${palette.name}`}>
+        {palette.colors.map((col, idx) => {
+          const minVal = palette.labels ? palette.labels[idx] : '';
+          const maxVal = palette.labels ? palette.labels[idx + 1] : '';
+          const rangeLabel = maxVal !== undefined ? `${minVal} – ${maxVal}` : minVal;
+          return (
+            <div
+              key={idx}
+              className="legend-ramp-swatch"
+              style={{ backgroundColor: col }}
+              title={`Bin ${idx + 1}: ${rangeLabel}`}
+            />
+          );
+        })}
       </div>
 
-      {/* Break tick labels */}
-      <div className="legend-ticks">
-        {palette.labels.map((lbl, idx) => (
-          <span key={idx} className="legend-tick-label">
-            {lbl}
-          </span>
-        ))}
+      {/* Break tick labels aligned under swatch dividers */}
+      <div className="legend-ticks" aria-hidden="true">
+        {palette.labels.map((lbl, idx) => {
+          const isFirst = idx === 0;
+          const isLast = idx === numLabels - 1;
+          const pct = numLabels > 1 ? (idx / (numLabels - 1)) * 100 : 0;
+          let transform = 'translateX(-50%)';
+          if (isFirst) transform = 'translateX(0)';
+          if (isLast) transform = 'translateX(-100%)';
+
+          return (
+            <span
+              key={idx}
+              className="legend-tick-label"
+              style={{
+                left: `${pct}%`,
+                transform
+              }}
+            >
+              {lbl}
+            </span>
+          );
+        })}
       </div>
     </div>
   );

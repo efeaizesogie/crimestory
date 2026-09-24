@@ -9,7 +9,6 @@ export function StateProfileCard({ state, onClose, onCategoryClick }) {
     <div className="state-profile-card">
       <div className="profile-header">
         <div>
-          <span className="profile-eyebrow">STATE SIGNATURE</span>
           <h3 className="profile-title">{state.name}</h3>
         </div>
         <button className="profile-close-btn" onClick={onClose} aria-label="Close profile">

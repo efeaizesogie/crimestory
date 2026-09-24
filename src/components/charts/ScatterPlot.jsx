@@ -54,7 +54,6 @@ export function ScatterPlot({
   return (
     <div ref={containerRef} className="editorial-scatterplot-container">
       <div className="chart-header-block">
-        <span className="eyebrow" style={{ marginBottom: 4 }}>CORRELATION ANALYSIS</span>
         <h4 className="chart-title">THE TWO DIMENSIONS OF THE STORY</h4>
         <p className="caption">
           Rate per 100k (X) vs. Share of offences against persons (Y). Colored by dominant offence category.

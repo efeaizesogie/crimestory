@@ -48,7 +48,6 @@ export function StateRankingsList({
   return (
     <div className="rankings-list-card">
       <div className="rankings-header">
-        <span className="eyebrow" style={{ marginBottom: 4 }}>COMPARATIVE RANKING</span>
         <h4 className="card-headline">STATE-BY-STATE BENCHMARK</h4>
 
         {/* Metric Selector Tabs */}

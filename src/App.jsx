@@ -8,20 +8,7 @@ import { StoryChapters } from './components/story/StoryChapters';
 import { MapCanvas } from './components/map/MapCanvas';
 import { MethodologyModal } from './components/story/MethodologyModal';
 
-const CHAPTERS = [
-  { id: 'ch-01', title: 'The Big Picture', mode: 'TOTAL_CASES' },
-  { id: 'ch-02', title: 'Population & Rates', mode: 'CRIME_RATE' },
-  { id: 'ch-03', title: 'Top 3 Concentration', mode: 'CONCENTRATION' },
-  { id: 'ch-04', title: 'Four Categories', mode: 'PROPERTY_RATE' },
-  { id: 'ch-05', title: 'Offences vs Persons', mode: 'PERSONS_RATE' },
-  { id: 'ch-06', title: 'Offences vs Property', mode: 'PROPERTY_RATE' },
-  { id: 'ch-07', title: 'Lawful Authority', mode: 'AUTHORITY_RATE' },
-  { id: 'ch-08', title: 'Local Acts', mode: 'LOCAL_ACTS_RATE' },
-  { id: 'ch-09', title: 'State Signatures', mode: 'STATE_SIGNATURES' },
-  { id: 'ch-10', title: 'Property Divergence', mode: 'PROPERTY_DIVERGENCE' },
-  { id: 'ch-11', title: 'Synthesis & Scatter', mode: 'DOMINANT_CATEGORY' },
-  { id: 'ch-12', title: 'Data Limitations', mode: 'TOTAL_CASES' },
-];
+import { CHAPTERS } from './data/chaptersData';
 
 export function App() {
   const [activeChapter, setActiveChapter] = useState(0);
@@ -102,6 +89,7 @@ export function App() {
           {/* Left Column: Narrative Step Cards */}
           <div className="narrative-col narrative-scroll-col">
             <StoryChapters
+              chapters={CHAPTERS}
               activeChapter={activeChapter}
               statesData={statesData}
               hoveredState={hoveredState}
@@ -109,6 +97,7 @@ export function App() {
               selectedState={selectedState}
               setSelectedState={setSelectedState}
               onCategoryClick={handleCategoryClick}
+              onOpenMethodology={() => setIsMethodologyOpen(true)}
             />
           </div>
 

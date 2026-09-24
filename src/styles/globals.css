@@ -397,7 +397,7 @@ body {
   box-shadow: 0 24px 52px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(239, 68, 68, 0.2);
 }
 
-.step-card::before {
+/* .step-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -408,7 +408,7 @@ body {
   border-bottom-left-radius: 6px;
   background: var(--step-accent, var(--border-subtle));
   transition: background var(--duration-fast) var(--ease-editorial);
-}
+} */
 
 /* Stat Highlight Blocks */
 .stat-highlight-block {
@@ -417,7 +417,6 @@ body {
   padding: 20px 24px;
   background: rgba(26, 31, 37, 0.55);
   border: 1px solid var(--border-subtle);
-  border-left: 3px solid var(--step-accent, var(--crime-red));
   border-radius: 4px;
   margin: 24px 0;
 }
@@ -437,7 +436,6 @@ body {
 
 /* Red accent callout note */
 .editorial-note {
-  border-left: 2px solid var(--crime-red);
   padding: 12px 16px;
   margin: 22px 0;
   font-size: 14px;

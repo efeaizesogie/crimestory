@@ -40,7 +40,6 @@ export function CategoryBreakdown({ activeCategory, onSelectCategory }) {
   return (
     <div className="category-breakdown-card">
       <div className="cat-breakdown-header">
-        <span className="eyebrow">NATIONAL TOTAL CLASSIFICATION</span>
         <h4 className="card-headline">125,790 CASES IN FOUR CATEGORIES</h4>
       </div>
 
